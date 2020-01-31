@@ -39,7 +39,6 @@ setup(name='python-Levenshtein',
       zip_safe=False,
       ext_modules = [extLevensthein],
       install_requires=[
-          'setuptools',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
