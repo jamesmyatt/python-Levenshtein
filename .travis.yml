@@ -4,9 +4,20 @@ python:
   - "2.7"
   - "3.2"
   - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "pypy"
+  - "pypy3"
 
-# command to install dependencies
-install: "python setup.py develop"
+# commands to install dependencies
+install:
+  - "python -m pip install -U pip"
+  - "python -m pip install -e ."
 
-# command to run tests
-script: "python setup.py test"
+# commands to run tests
+script:
+  - python -c "import Levenshtein"
+  - "python setup.py test"
